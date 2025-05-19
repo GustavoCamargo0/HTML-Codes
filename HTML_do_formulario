@@ -28,15 +28,13 @@
             <form>
                 <button type="submit">Enviar</button>
             </form>
-            <form>
-                <button type="reset">Limpar</button>
-            </form>
         </div>
         <br>
         <form>
             <a href="file:///C:/Users/Aluno.SN-404372.011/Documents/Nova%20pasta/esqueceuasenha.html">Esqueceu a senha?</a>
         </form>
     </div>
+
 
 </head>
 <body>
