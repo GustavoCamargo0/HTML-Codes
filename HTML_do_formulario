@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="formulario.css">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <div class="login-container">
+        <br>
+        <br>
+        <h2>LOGIN</h2>
+        <div class="info">
+            <form>
+                <input type="text" placeholder="Usuario" required>
+            </form>
+            <form>
+                <input type="password" placeholder="Senha" required>
+            </form>
+            <form>
+                <input type="email" placeholder="Email" required>
+            </form>
+        </div>
+        <br>
+        <div class="Buttons">
+            <form>
+                <button type="submit">Enviar</button>
+            </form>
+            <form>
+                <button type="reset">Limpar</button>
+            </form>
+        </div>
+        <br>
+        <form>
+            <a href="file:///C:/Users/Aluno.SN-404372.011/Documents/Nova%20pasta/esqueceuasenha.html">Esqueceu a senha?</a>
+        </form>
+    </div>
+
+</head>
+<body>
+    
+</body>
+</html>
