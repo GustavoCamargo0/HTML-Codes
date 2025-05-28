@@ -1,0 +1,61 @@
+   <!-- ATIVIDADE 1 -->
+    <p id="mensagem"> Texto Antigo </p>
+    <script>
+
+        const Novo = document.getElementById("mensagem").innerText = "Texto alterado com sucesso!"
+
+    </script>
+    <br>
+    <!-- ATIVIDADE 2    -->
+     <P class="destaque">Texto 1</P>
+     <P class="destaque">Texto 2</P>
+     <P class="destaque">Texto 3</P>
+     <script>
+        const primeiro = document.querySelector(".destaque").style.color = "blue"
+     
+     </script>
+    <br>
+    <!--ATIVADADE 3 -->
+    <P class="destaque1">Texto 1</P>
+    <P class="destaque1">Texto 2</P>
+    <P class="destaque1">Texto 3</P>
+    <script>
+        const todos = document.querySelectorAll(".destaque1")
+            for (let index = 0; index < todos.length; index++) {
+            todos[index].innerText= "Taca o fodase";
+            todos[index].style.background = "gray";
+            }
+        todos[0].innerText = "Atualizado"
+        todos[1].innerText = "Atualizado"
+        todos[2].innerText = "Atualizado"
+    </script>
+    <br>
+     <!--ATIVADADE 4 -->
+    <div id="caixa"> texto original</div>
+    <script>
+        const MudarTexto = document.getElementById("caixa").textContent = "Novo texto simples"
+    </script>
+    <br>
+    <!--ATIVADADE 5 -->
+    <div class="bloco">Bloco 1</div>
+    <div class="bloco">Bloco 2</div>
+    <div class="bloco">Bloco 3</div>
+    <script>
+        const estilo = document.querySelectorAll(".bloco")
+        estilo[0].style.color = "green"
+        estilo[1].style.color = "red"
+        estilo[2].style.color = "blue"
+    </script>
+    <br>
+     <!--ATIVADADE 6 -->
+    <div id="lista">Lista</div>
+    <button onclick=additem()>ADD item</button>
+    <script>
+    function additem(){
+        const item = document.createElement("p")
+        console.log(item)
+        item.textContent = "Novo item"
+        document.getElementById("lista").appendChild(item)
+    
+    }
+    </script>
