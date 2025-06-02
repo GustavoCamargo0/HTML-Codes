@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>ATIVIDADE CSS</title>
+    <style>
+        /* ATIVIDADE 1*/
+        .botao{
+            /* Comando para trocar a cor de fundo */
+            background-color: green;
+            /* Comando para trocar a cor do texto */
+            color: white;
+            /* Comando para arredondar a borda */
+            border-radius: 20px;}
+
+        .botao:hover{
+            /* Comando para trocar a cor de fundo quando o mouse passa por cima */
+            background-color: darkgreen;
+        }
+        /* ATIVIDADE 2 */
+        .caixa{
+            /*Comando para mudar a largura*/
+            width: 300px;
+            /*Comando para mudar a altura*/
+            height: 100px;
+            /*Comando para mudar a cor da borda, a espessura e o tipo*/
+            border: 2px solid black;
+            /*Comando para mudar o espaçamento interno*/
+            padding: 20px;
+            /*Comando para mudar a margem externa*/
+            margin: 30px;
+        }
+        /*ATIVIDADE 3*/
+        .card{
+            /*Comando para texto centralizado*/
+            text-align: center;
+            /*Cor da borda*/
+            border: 2px solid grey;
+            /*Comando de arredodamento da borda*/
+            border-radius: 20px;
+            /*Comando da sombra*/
+            box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.6);
+        }
+        .b-card{
+            /*Comando para trocar a cor de fundo do botao*/
+            background-color: lightblue;
+        }
+
+        .b-card:hover{
+            /*Comando para mudar o tamanho do botao ao passar o mouse*/
+            transform: scale(1.1);
+            /*Comando para Fazer a transição do aumento do botao*/
+            transition: 0.2s ease;
+        }
+        /*ATIVIDADE 4*/
+        .menu{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .menu a{
+            text-decoration: none;
+        }
+        .menu a:hover{
+            color: yellow;
+        }
+        /*ATIVIDADE 5*/
+        .formulario{
+          display: grid;grid-template-columns: 1fr 1fr;
+        }
+        .formulario button{
+            grid-column: 1 / -1;
+            justify-self: center;
+        }
+        /*ATIVIDADE 6*/
+        .lista-tarefas{
+            list-style-type: none;
+        }
+        .lista-tarefas li::before{
+            content: "✓";
+            color: green;
+            margin: 10px;
+        }
+        /*ATIVIDADE 7*/
+        .tabela-notas{
+            border-collapse: collapse;
+            border: 2px solid black;
+            margin: auto;
+        }
+        .tabela-notas th{
+            background-color: lightgrey;
+            border: 2px solid black;
+        }
+        .tabela-notas td{
+            border: 2px solid black;
+        }
+        .tabela-notas tr:hover{
+            background-color: limegreen;
+        }
+        /*ATIVIDADE 9*/
+        .tema-claro{
+            background-color: white;
+            color: black;
+        }
+        .tema-escuro{
+            background-color: black;
+            color: white;
+        }
+          /*ATIVIDADE 10*/
+        .destaque:hover{
+            color: black;
+            background-color: yellow;
+            transform: scale(1.2);
+            transition: 0.3s ease;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body class="tema-claro">
+    
+    <button class="botao">Clique aqui</button>
+    <br>
+    <div class="caixa">Conteudo da caixa</div>
+    <br>
+    <div class="card">
+        <h2>Maria Oliveira</h2>
+        <p>Desenvolvedora Front-end</p>
+        <button class="b-card">Seguir</button>
+    </div>
+    <br>
+    <nav class="menu">
+        <a href="#">inicio</a>
+        <a href="#">sobre</a>
+        <a href="#">serviços</a>
+        <a href="#">contatos</a>
+    </nav>
+    <br>
+    <form class="formulario">
+        <input type="text" placeholder="Nome">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Telefone">
+        <input type="text" placeholder="Cidade">
+        <button>Enviar</button>
+    </form>
+    <br>
+    <ul class="lista-tarefas">
+        <li>Estudar HTML</li>
+        <li>Praticar CSS</li>
+        <li>Desenvolver um projeto</li>
+    </ul>
+    <br>
+    <table class="tabela-notas">
+        <thead>
+            <tr>
+                <th>Aluno</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João Silva</td>
+                <td>8.5</td>
+            </tr>
+            <tr>
+                <td>Maria Oliveira</td>
+                <td>9.0</td>
+            </tr>
+            <tr>
+                <td>Carlos Pereira</td>
+                <td>7.5</td>
+            </tr>
+    </table>
+    <br>
+    <h1>Bem-Vindo!</h1>
+    <button id="mm">Mudar Modo</button>
+    <br>
+       <script>
+    /*ATIVIDADE 9*/
+        const at = document.getElementById("mm");
+    
+        at.addEventListener('click', () =>{
+            document.body.classList.toggle('tema-escuro');
+            document.body.classList.toggle('tema-claro');
+
+        })
+    </script>
+    <p class="destaque"> Passe o mouse sobre esse texto para ver o efeito</p>
+</body>
+</html>
