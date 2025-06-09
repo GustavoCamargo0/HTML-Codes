@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="aula.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add()">Add nome final (push)</button>
+    <button onclick="addinicio()">Add nome inicio(unshift)</button>
+    <button onclick="removefinal()">Remover nome final (pop)</button>
+    <button onclick="remove()">Remover nome inicio (shift)</button>
+    <button onclick="especifico()">Remover posicao</button>
+    <button onclick="dividir()">Dividir array</button>
+</body>
+</html>
