@@ -1,0 +1,26 @@
+h2{
+    text-align: center;
+}
+
+
+.yeezus{
+    
+    color: red;
+    background:linear-gradient(100deg,#fff,#808080,#000)
+    
+    
+}
+
+.blonde{
+    color: #1E2B24;
+    background:linear-gradient(100deg,#EAB6C7 ,#808080)
+}
+
+.call{
+    color: #4A3624;
+    background:linear-gradient(100deg,#BFDDEB,#F5E6C8)
+}
+.food{
+    color:#B0B0B0;
+    background:linear-gradient(100deg,#3A5B3C, #4B2C5E )
+}
