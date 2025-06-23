@@ -1,47 +1,52 @@
 
 const botaoJogar = document.getElementById("botaoJogar");
 const diviniciojogo = document.getElementById("iniciojogo");
-//const nomeNivelAtualSpan = document.getElementById("nomeNivelAtual");
 const caixaUniQuizDiv = document.getElementById("caixaUniQuiz");
+const divtextoPergunta = document.getElementById("textoperguntas");
+const opcoesRespostas = document.getElementById("opcoesRespostas");
 let indicePerguntas = 0
+let pontos = 0
 
 // Arrays
 const perguntasQuiz = [ 
-     "Qual é o maior deserto do mundo?",
-     "Qual é a capital do Brasil?",
-     "Qual é a capital da Austrália?",
-     "Qual é o país com maior população no mundo?",
-     " Qual a linha imaginária que atravessa o Brasil?",
-     "Qual o oceano que banha o Brasil?",
+     {pergunta: "Qual é o maior deserto do mundo?", opcoes: ["Sahara", "Gobi", "Antártida", "Saara"], resposta:"Antártida"},
+     {pergunta: "Qual é a capital do Brasil?", opcoes: ["Brasília", "Rio de Janeiro", "São Paulo", "Salvador"], resposta:"Brasília"},
+     {pergunta: "Qual é a capital da Austrália?", opcoes: ["Sydney", "Melbourne", "Canberra", "Brisbane"], resposta:"Canberra"},
+     {pergunta: "Qual é o país com maior população no mundo?", opcoes: ["China", "Índia", "Estados Unidos", "Indonésia"], resposta:"China"},
+     {pergunta: "Qual a linha imaginária que atravessa o Brasil?", opcoes: ["Equador", "Trópico de Câncer", "Trópico de Capricórnio", "Meridiano de Greenwich"], resposta:"Equador"},
+     {pergunta: "Qual o oceano que banha o Brasil?", opcoes: ["Atlântico", "Pacífico", "Índico", "Ártico"], resposta:"Atlântico"},
 ]
 
 
 function iniciarjogo() {
-
-    
-    //diviniciojogo.remove();
     diviniciojogo.innerHTML = ""
-    carregarQuestao(perguntasQuiz[0]);
-    
+    carregarQuestao(perguntasQuiz[indicePerguntas]);
 }
 
-function carregarQuestao(pergunta) {
+function carregarQuestao(questao) {
+    divtextoPergunta.textContent = questao.pergunta;
 
     // tornando a DIV das questões visível
     caixaUniQuizDiv.classList.add("active");
 
-    perguntasQuiz.forEach(opcao => {
-        const botao = document.createElement("button");
-        botao.textContent = pergunta;
-        botao.classList.add("answer-btn");
-        botao.addEventListener("click", () => opcao);
-        opcoesRespostas.appendChild(botao);
-    });
-}
+  questao.opcoes.forEach(opcoes => {  
+    const botao = document.createElement("button");
+    botao.textContent = opcoes;
+    botao.classList.add("answer-btn");
+    botao.addEventListener("click", () => validaresposta());
+    opcoesRespostas.appendChild(botao);
+})}
 
 function carregarProximaQuestao(){
     indicePerguntas++;
+    opcoesRespostas.innerHTML = ""; 
     if(indicePerguntas < perguntasQuiz.length) {
-        carregarQuestao(perguntasQuiz[indicePerguntas]);
+        carregarQuestao(perguntasQuiz[indicePerguntas]); 
     }
+    else{
+      alert("Fim do Quiz!");
+    }
+}
+function validaresposta(){
+   
 }
