@@ -1,0 +1,47 @@
+/* ATIVIDADE 1
+let Maior = 0
+let Menor = 100
+let Alturas
+for(let index = 1; index <= 5; index++){
+    Alturas = parseFloat(prompt("Digite a altura da pessoa " + index ))
+    if(Alturas > Maior){
+        Maior = Alturas
+    }
+    if(Alturas < Menor){
+        Menor = Alturas
+    }
+    
+}
+console.log(Menor)
+console.log(Maior)
+*/ 
+
+/* ATIVIDADE 2
+for (let index = 100; index < 200; index++) {
+    if(index % 2 > 0){
+        alert(index)
+    }
+    
+}
+*/
+
+/* ATIVIDADE 3 
+let fato = Number(prompt("Digite um numero para fatorar"))
+let somafato = 1
+for (let index = 1; index <= fato; index++) {
+    somafato *= index 
+}
+console.log(somafato)
+*/
+
+/* ATIVIDADE 4
+let num = 0
+let numneg = 0
+for (let index = 0; index <= 5; index++) {
+    num = (prompt("Digite um numero"))
+    if(num < 0){
+        numneg += 1
+    }
+}
+alert("O numero de numeros negativos é: " + numneg)
+*/
